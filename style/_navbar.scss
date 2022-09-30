@@ -4,10 +4,9 @@
 #navbar-section{
     .navbar-container{
         background-color: $third-background;
-        position: fixed;
         width: 100vw;
         height: 280px;
-        @include light-box-shadow;
+        box-shadow:inset 0 -10px 10px -10px #fff;
 
         @include tablet{
             height: 200px;       
@@ -16,8 +15,7 @@
 
         @include mobile{
             height: 520px;  
-            width: 375px; 
-            position: initial;    
+            width: 375px;    
         }
 
         .background-line{

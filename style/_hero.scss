@@ -4,7 +4,6 @@
 #hero-section{
     .hero-section-container{
         width: 100vw;
-        margin-top: 279px;
         height: 500px;
         display: flex;
         align-items: center;
@@ -14,12 +13,9 @@
         background-size: contain;
         background-color: black;
 
-        @include tablet{
-            margin-top: 200px;
-        }
+
 
         @include mobile{
-            margin-top: 0;
             height: 800px;
         }
 

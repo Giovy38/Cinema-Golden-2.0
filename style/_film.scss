@@ -1,0 +1,65 @@
+@import './color';
+@import './utilies';
+
+#film-section{
+    .film-section-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 1.5rem;
+        background-color: $third-background;
+        padding: 1.5rem;
+
+        &-info{
+            background-color: $ticket-color;
+            @include flexCenter;
+            flex-direction: column;
+            height: 700px;
+            width: 350px;
+            border-radius: 10px;
+
+
+            .film-card-hour{
+                @include flexCenter;
+                flex-direction: column;
+                background-color: $ticket-dark-hover-color;
+                position: relative;
+                bottom: 15px;
+                width: 350px;
+                border-radius: 10px 10px 0 0;
+
+                h3{
+                    text-align: center
+                }
+            }
+
+            .film-section-container-card{
+                @include flexCenter;
+                flex-direction: column;
+
+                img{
+                    width: 300px;
+                }
+
+                .film-title-year{
+                    display: flex;
+                    align-items: flex-end;
+                    width: 300px;
+
+                    .film-title{
+                        font-size: 35px;
+                        text-transform: uppercase;
+                        text-align: left;
+                    }
+
+                    h5{
+                        font-size: 15px;
+                    }
+                }
+
+                .film-detail{
+                    padding-left: 1.25rem;
+                }
+            }
+        }
+    }
+}
