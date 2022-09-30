@@ -1,0 +1,29 @@
+@import './color';
+
+// CENTER ITEMS
+
+    @mixin flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    };
+
+// BOX SHADOW EFFECTS
+
+    @mixin classic-box-shadow {
+        box-shadow: 5px 5px 10px $trasparent-color;
+    };
+
+// MEDIA QUERIES 
+
+    @mixin tablet {
+        @media screen and (max-width: 768px) {
+            @content
+        }
+    };
+
+    @mixin mobile {
+        @media screen and (max-width: 376px) {
+            @content
+        }
+    };

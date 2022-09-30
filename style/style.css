@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar-section .navbar-container {
+  background-color: #650808;
+  position: fixed;
+  width: 100vw;
+  height: 280px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.658);
+}
+@media screen and (max-width: 768px) {
+  #navbar-section .navbar-container {
+    height: 200px;
+  }
+}
+#navbar-section .navbar-container .background-line {
+  background: linear-gradient(to right, rgb(170, 16, 16), rgb(107, 9, 9), rgb(126, 41, 41), rgb(132, 23, 23));
+  height: 110px;
+  width: 1100px;
+  position: relative;
+  top: 90px;
+  left: 200px;
+  transform: skewX(-30deg);
+}
+@media screen and (max-width: 768px) {
+  #navbar-section .navbar-container .background-line {
+    width: 725px;
+    height: 63px;
+    top: 70px;
+    left: 20px;
+  }
+}
+#navbar-section .navbar-container-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 50px;
+  right: 60px;
+}
+@media screen and (max-width: 768px) {
+  #navbar-section .navbar-container-link {
+    bottom: 20px;
+  }
+}
+#navbar-section .navbar-container-link a {
+  text-decoration: none;
+}
+#navbar-section .navbar-container-link a:hover img {
+  background-color: #b38f61;
+}
+#navbar-section .navbar-container-link-element {
+  display: flex;
+  align-items: center;
+}
+#navbar-section .navbar-container-link-element img {
+  width: 250px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.658);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+@media screen and (max-width: 768px) {
+  #navbar-section .navbar-container-link-element img {
+    width: 170px;
+  }
+}
+#navbar-section .navbar-container-link-element .current {
+  background-color: #b38f61;
+}
+#navbar-section .navbar-container-link-element .current:hover {
+  background-color: #8f7048;
+}
+#navbar-section .navbar-container-link-element label {
+  text-transform: uppercase;
+  position: relative;
+  left: 186px;
+  top: 32px;
+  z-index: 2;
+  cursor: pointer;
+  color: #650808;
+  width: 104px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#navbar-section .navbar-container-link-element #home-label {
+  font-size: 20px;
+}
+#navbar-section .navbar-container-link-element #prossimamente-label {
+  font-size: 11px;
+}
+#navbar-section .navbar-container-link-element #prezzi-label {
+  font-size: 15px;
+}/*# sourceMappingURL=style.css.map */

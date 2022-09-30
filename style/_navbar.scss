@@ -1,0 +1,115 @@
+@import './color';
+@import './utilies';
+
+#navbar-section{
+    .navbar-container{
+        background-color: $third-background;
+        position: fixed;
+        width: 100vw;
+        height: 280px;
+        @include classic-box-shadow;
+
+        @include tablet{
+            height: 200px;           
+        }
+
+        .background-line{
+            background: $gradient-decoration;
+            height: 110px;
+            width: 1100px;
+            position: relative;
+            top: 90px;
+            left: 200px;
+            transform: skewX(-30deg);
+
+            @include tablet{
+                width: 725px;
+                height: 63px;
+                top: 70px;
+                left: 20px;
+            }
+
+        }
+
+        &-link{
+            
+            @include flexCenter;
+            position: relative;
+            bottom: 50px;
+            right: 60px;
+
+            @include tablet{
+                bottom: 20px;
+            }
+           
+
+            a{
+                text-decoration: none;
+
+                &:hover{
+                    img{
+                        background-color: $ticket-dark-color;
+                    }
+                }
+            }
+            
+
+        &-element{
+
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 250px;
+                z-index: 1;
+                border-radius: 10px;
+                @include classic-box-shadow;
+                backdrop-filter: blur(12px);
+
+                @include tablet{
+                    width: 170px;
+                }
+            }
+
+            .current{
+                background-color: $ticket-dark-color;
+
+                &:hover{
+                    background-color: $ticket-dark-hover-color;
+                }
+            }
+
+            label{
+                text-transform: uppercase;
+                position: relative;
+                left: 186px;
+                top: 32px;
+                z-index: 2;
+                cursor: pointer;
+                color: $third-background;
+                width: 104px;
+                height: 52px;
+                @include flexCenter;
+                text-align: center;
+
+            }
+
+
+            #home-label{
+                font-size: 20px;
+            }
+
+            #prossimamente-label{
+                font-size: 11px;
+                @include tablet{
+                    
+                }
+            }
+            #prezzi-label{
+                font-size: 15px;
+            }
+           
+        }
+        }
+    }
+}
