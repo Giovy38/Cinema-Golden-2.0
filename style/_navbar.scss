@@ -7,14 +7,17 @@
         position: fixed;
         width: 100vw;
         height: 280px;
-        @include classic-box-shadow;
+        @include light-box-shadow;
 
         @include tablet{
-            height: 200px;           
+            height: 200px;       
+            width: 768px;    
         }
 
         @include mobile{
-            height: 520px;       
+            height: 520px;  
+            width: 375px; 
+            position: initial;    
         }
 
         .background-line{

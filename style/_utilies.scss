@@ -10,8 +10,13 @@
 
 // BOX SHADOW EFFECTS
 
+    // normal box-shadow
     @mixin classic-box-shadow {
         box-shadow: 5px 5px 10px $trasparent-color;
+    };
+    // light box-shadow
+    @mixin light-box-shadow {
+        box-shadow: 2.5px 2.5px 10px #fff;
     };
 
 // MEDIA QUERIES 

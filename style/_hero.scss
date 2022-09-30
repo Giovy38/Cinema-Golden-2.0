@@ -1,0 +1,132 @@
+@import './color';
+@import './utilies';
+
+#hero-section{
+    .hero-section-container{
+        width: 100vw;
+        margin-top: 279px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        background-image: url(/images/dark\ projector\ .jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: black;
+
+        @include tablet{
+            margin-top: 200px;
+        }
+
+        @include mobile{
+            margin-top: 0;
+            height: 800px;
+        }
+
+        &-img{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            @include mobile{
+                flex-direction: column;
+            }
+
+            &-left{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2.5rem;
+                gap: 1rem;
+                
+
+                #hero-section-black-logo-img{
+                    width: 100px;
+                }
+
+                #hero-section-lumiere-img{
+                    width: 100px;
+                }
+
+                #hero-section-webtic-img{
+                    width: 200px;
+                }
+
+                .prenotation{
+                    @include flexCenter;
+                    flex-direction: column;
+                    color: $text-light-color;
+                    animation: zoom-in-out 5s ease infinite ;
+
+                    @keyframes zoom-in-out {
+                        0% {
+                          transform: scale(0.5, 0.5);
+                        }
+                        50% {
+                          transform: scale(0.7, 0.7);
+                        }
+                        100% {
+                          transform: scale(0.5, 0.5);
+                        }
+                  }
+                }
+
+            }
+    
+            &-center{
+                @include flexCenter;
+                
+                #hero-section-logo-img{
+                    width: 370px;
+                    position: relative;
+                    top: 121px;
+                    right: 80px;
+                    padding: 1rem;
+                    border-radius: 5px;
+                    @include light-box-shadow;
+
+                    @include tablet{
+                        width: 300px;
+                        top: 20px;
+                        right: 30px;
+                    }
+
+                    @include mobile{
+                        left: 0px;
+                    }
+                }
+            }
+    
+            &-right{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2.5rem;
+                gap: 1rem;
+
+                img{
+                    width: 70px;
+                }
+
+                #hero-section-fb-img{
+                    width: 60px;
+                    border-radius: 5px;
+                }
+
+                @include mobile{
+                    flex-direction: row;
+                }
+            }
+        }
+
+        
+
+        
+
+       
+
+        
+
+    }
+}
