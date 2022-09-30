@@ -16,6 +16,11 @@
     height: 200px;
   }
 }
+@media screen and (max-width: 376px) {
+  #navbar-section .navbar-container {
+    height: 520px;
+  }
+}
 #navbar-section .navbar-container .background-line {
   background: linear-gradient(to right, rgb(170, 16, 16), rgb(107, 9, 9), rgb(126, 41, 41), rgb(132, 23, 23));
   height: 110px;
@@ -28,9 +33,32 @@
 @media screen and (max-width: 768px) {
   #navbar-section .navbar-container .background-line {
     width: 725px;
-    height: 63px;
-    top: 70px;
+    height: 100px;
+    top: 57px;
     left: 20px;
+  }
+}
+@media screen and (max-width: 376px) {
+  #navbar-section .navbar-container .background-line {
+    -webkit-animation: up-down 5s alternate infinite;
+            animation: up-down 5s alternate infinite;
+    transition: all 2s;
+  }
+  @-webkit-keyframes up-down {
+    from {
+      top: 57px;
+    }
+    to {
+      top: 370px;
+    }
+  }
+  @keyframes up-down {
+    from {
+      top: 57px;
+    }
+    to {
+      top: 370px;
+    }
   }
 }
 #navbar-section .navbar-container-link {
@@ -43,7 +71,13 @@
 }
 @media screen and (max-width: 768px) {
   #navbar-section .navbar-container-link {
-    bottom: 20px;
+    bottom: 65px;
+  }
+}
+@media screen and (max-width: 376px) {
+  #navbar-section .navbar-container-link {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 #navbar-section .navbar-container-link a {
@@ -67,6 +101,7 @@
 @media screen and (max-width: 768px) {
   #navbar-section .navbar-container-link-element img {
     width: 170px;
+    padding: 2.5rem;
   }
 }
 #navbar-section .navbar-container-link-element .current {
@@ -90,12 +125,29 @@
   justify-content: center;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  #navbar-section .navbar-container-link-element label {
+    top: 47px;
+    left: 140px;
+    color: #f2c78d;
+  }
+}
 #navbar-section .navbar-container-link-element #home-label {
   font-size: 20px;
 }
 #navbar-section .navbar-container-link-element #prossimamente-label {
   font-size: 11px;
 }
+@media screen and (max-width: 768px) {
+  #navbar-section .navbar-container-link-element #prossimamente-label {
+    font-size: 17px;
+  }
+}
 #navbar-section .navbar-container-link-element #prezzi-label {
   font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+  #navbar-section .navbar-container-link-element #prezzi-label {
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=style.css.map */

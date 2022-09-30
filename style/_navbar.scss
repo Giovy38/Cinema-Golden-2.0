@@ -13,6 +13,10 @@
             height: 200px;           
         }
 
+        @include mobile{
+            height: 520px;       
+        }
+
         .background-line{
             background: $gradient-decoration;
             height: 110px;
@@ -24,9 +28,24 @@
 
             @include tablet{
                 width: 725px;
-                height: 63px;
-                top: 70px;
+                height: 100px;
+                top: 57px;
                 left: 20px;
+            }
+
+            @include mobile{
+                animation: up-down 5s alternate infinite;
+                transition: all 2s;
+
+                @keyframes up-down {
+                    from{
+                        top: 57px;
+                    }
+
+                    to{
+                        top: 370px;
+                    }
+                }
             }
 
         }
@@ -39,7 +58,12 @@
             right: 60px;
 
             @include tablet{
-                bottom: 20px;
+                bottom: 65px;
+            }
+
+            @include mobile{
+                flex-direction: column;   
+                gap: 1rem;
             }
            
 
@@ -68,7 +92,9 @@
 
                 @include tablet{
                     width: 170px;
+                    padding: 2.5rem;
                 }
+
             }
 
             .current{
@@ -92,6 +118,12 @@
                 @include flexCenter;
                 text-align: center;
 
+                @include tablet{
+                    top: 47px;
+                    left: 140px;
+                    color: $ticket-color;
+                }
+
             }
 
 
@@ -102,11 +134,14 @@
             #prossimamente-label{
                 font-size: 11px;
                 @include tablet{
-                    
+                    font-size: 17px;
                 }
             }
             #prezzi-label{
                 font-size: 15px;
+                @include tablet{
+                    font-size: 13px;   
+                }
             }
            
         }
