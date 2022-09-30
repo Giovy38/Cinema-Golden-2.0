@@ -284,4 +284,118 @@ section {
   #hero-section .hero-section-container-img-right {
     flex-direction: row;
   }
+}
+
+.curtain {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  overflow: hidden;
+  -webkit-animation: go-back 10s ease forwards;
+          animation: go-back 10s ease forwards;
+}
+@-webkit-keyframes go-back {
+  from {
+    z-index: 5;
+  }
+  to {
+    z-index: -1;
+  }
+}
+@keyframes go-back {
+  from {
+    z-index: 5;
+  }
+  to {
+    z-index: -1;
+  }
+}
+.curtain img {
+  width: 50vw;
+  height: 100vh;
+}
+.curtain .curtain-panel-left {
+  position: relative;
+  right: 0;
+  -webkit-animation: open-curtain-left 5s ease forwards;
+          animation: open-curtain-left 5s ease forwards;
+}
+@media screen and (max-width: 768px) {
+  .curtain .curtain-panel-left {
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+  }
+}
+@-webkit-keyframes open-curtain-left {
+  0% {
+    right: 0;
+  }
+  25% {
+    right: 350px;
+  }
+  50% {
+    right: 560px;
+  }
+  100% {
+    right: 860px;
+    display: none;
+  }
+}
+@keyframes open-curtain-left {
+  0% {
+    right: 0;
+  }
+  25% {
+    right: 350px;
+  }
+  50% {
+    right: 560px;
+  }
+  100% {
+    right: 860px;
+    display: none;
+  }
+}
+.curtain .curtain-panel-right {
+  position: relative;
+  left: 0;
+  -webkit-animation: open-curtain-right 5s ease forwards;
+          animation: open-curtain-right 5s ease forwards;
+}
+@media screen and (max-width: 768px) {
+  .curtain .curtain-panel-right {
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+  }
+}
+@-webkit-keyframes open-curtain-right {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 350px;
+  }
+  50% {
+    left: 560px;
+  }
+  100% {
+    left: 860px;
+    display: none;
+  }
+}
+@keyframes open-curtain-right {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 350px;
+  }
+  50% {
+    left: 560px;
+  }
+  100% {
+    left: 860px;
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

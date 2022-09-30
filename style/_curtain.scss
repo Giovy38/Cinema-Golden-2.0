@@ -1,0 +1,86 @@
+@import './utilies';
+
+.curtain{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    overflow: hidden;
+    animation: go-back 10s ease forwards;
+
+
+
+    @keyframes go-back {
+        from{
+            z-index: 5;
+        }
+
+        to{
+            z-index: -1;
+        }
+    }
+
+    img{
+        width: 50vw;
+        height: 100vh;
+    }
+
+    .curtain-panel-left{
+        position: relative;
+        right: 0;
+        animation: open-curtain-left 5s ease forwards;
+
+        @include tablet{
+            animation-duration: 10s;
+        }
+        
+
+        @keyframes open-curtain-left {
+            0%{
+                right: 0;
+            }
+            25%{
+                right: 350px;
+            }
+            50%{
+                right: 560px;
+            }
+            100%{
+                right: 860px;
+                display: none;
+            }
+        }
+
+
+    }
+
+    .curtain-panel-right{
+        position: relative;
+        left: 0;
+        animation: open-curtain-right 5s ease forwards;
+
+        @include tablet{
+            animation-duration: 10s;
+        }
+
+        @keyframes open-curtain-right {
+            0%{
+                left: 0;
+            }
+            25%{
+                left: 350px;
+            }
+            50%{
+                left: 560px;
+            }
+            100%{
+                left: 860px;
+                display: none;
+            }
+        }
+    }
+
+    
+
+   
+}
