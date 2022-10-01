@@ -398,6 +398,16 @@ section {
   background-color: #650808;
   padding: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+  #film-section .film-section-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 376px) {
+  #film-section .film-section-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 #film-section .film-section-container-info {
   background-color: #f2c78d;
   display: flex;
@@ -408,6 +418,11 @@ section {
   width: 350px;
   border-radius: 10px;
 }
+@media screen and (max-width: 376px) {
+  #film-section .film-section-container-info {
+    width: 300px;
+  }
+}
 #film-section .film-section-container-info .film-card-hour {
   display: flex;
   align-items: center;
@@ -415,9 +430,15 @@ section {
   flex-direction: column;
   background-color: #8f7048;
   position: relative;
-  bottom: 15px;
+  bottom: 62px;
   width: 350px;
+  height: 80px;
   border-radius: 10px 10px 0 0;
+}
+@media screen and (max-width: 376px) {
+  #film-section .film-section-container-info .film-card-hour {
+    width: 300px;
+  }
 }
 #film-section .film-section-container-info .film-card-hour h3 {
   text-align: center;
@@ -428,21 +449,72 @@ section {
   justify-content: center;
   flex-direction: column;
 }
-#film-section .film-section-container-info .film-section-container-card img {
-  width: 300px;
+#film-section .film-section-container-info .film-section-container-card #film-1-poster {
+  background-image: url(/images/avatar.jpg);
+  background-size: cover;
+  background-position: 0 -31px;
 }
-#film-section .film-section-container-info .film-section-container-card .film-title-year {
+#film-section .film-section-container-info .film-section-container-card #film-2-poster {
+  background-image: url(/images/db\ super\ hero.jpg);
+  background-size: cover;
+  background-position: 0 -31px;
+}
+#film-section .film-section-container-info .film-section-container-card #film-3-poster {
+  background-image: url(/images/dont\ worry\ darling\ .jpg);
+  background-size: cover;
+  background-position: 0 -68px;
+}
+#film-section .film-section-container-info .film-section-container-card #film-4-poster {
+  background-image: url(/images/memory.jpg);
+  background-size: cover;
+  background-position: 0 -5px;
+}
+#film-section .film-section-container-info .film-section-container-card #film-5-poster {
+  background-image: url(/images/watcher.jpg);
+  background-size: cover;
+  background-position: 0 -18px;
+}
+#film-section .film-section-container-info .film-section-container-card .film-img {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  bottom: 4px;
+}
+@media screen and (max-width: 376px) {
+  #film-section .film-section-container-info .film-section-container-card .film-img {
+    width: 290px;
+    height: 290px;
+  }
+}
+#film-section .film-section-container-info .film-section-container-card .film-title-gender {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   width: 300px;
+  margin-bottom: 1.5rem;
 }
-#film-section .film-section-container-info .film-section-container-card .film-title-year .film-title {
+#film-section .film-section-container-info .film-section-container-card .film-title-gender .film-title {
   font-size: 35px;
   text-transform: uppercase;
   text-align: left;
+  height: 80px;
+  width: 270px;
+  display: flex;
+  align-items: flex-end;
 }
-#film-section .film-section-container-info .film-section-container-card .film-title-year h5 {
+@media screen and (max-width: 376px) {
+  #film-section .film-section-container-info .film-section-container-card .film-title-gender .film-title {
+    text-align: center;
+    width: 300px;
+    justify-content: center;
+  }
+}
+#film-section .film-section-container-info .film-section-container-card .film-title-gender h5 {
   font-size: 15px;
+}
+@media screen and (max-width: 376px) {
+  #film-section .film-section-container-info .film-section-container-card .film-title-gender h5 {
+    text-align: center;
+  }
 }
 #film-section .film-section-container-info .film-section-container-card .film-detail {
   padding-left: 1.25rem;
