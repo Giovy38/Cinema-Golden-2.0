@@ -89,7 +89,7 @@ section {
   text-decoration: none;
 }
 #navbar-section .navbar-container-link a:hover img {
-  background-color: #b38f61;
+  background: linear-gradient(to right, #8f7048, #f2c78d, #b38f61);
 }
 #navbar-section .navbar-container-link-element {
   display: flex;
@@ -110,10 +110,10 @@ section {
   }
 }
 #navbar-section .navbar-container-link-element .current {
-  background-color: #b38f61;
+  background: linear-gradient(to right, #8f7048, #f2c78d, #b38f61);
 }
 #navbar-section .navbar-container-link-element .current:hover {
-  background-color: #8f7048;
+  background: #8f7048;
 }
 #navbar-section .navbar-container-link-element label {
   text-transform: uppercase;
@@ -409,7 +409,7 @@ section {
   }
 }
 #film-section .film-section-container-info {
-  background-color: #f2c78d;
+  background: linear-gradient(to right, #8f7048, #f2c78d, #b38f61);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -428,7 +428,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #8f7048;
+  background-color: #89612d;
   position: relative;
   bottom: 62px;
   width: 350px;

@@ -73,7 +73,7 @@
 
                 &:hover{
                     img{
-                        background-color: $ticket-dark-color;
+                        background: $golden-color;
                     }
                 }
             }
@@ -99,10 +99,10 @@
             }
 
             .current{
-                background-color: $ticket-dark-color;
+                background: $golden-color;
 
                 &:hover{
-                    background-color: $ticket-dark-hover-color;
+                    background: $ticket-dark-hover-color;
                 }
             }
 

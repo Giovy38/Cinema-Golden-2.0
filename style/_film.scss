@@ -18,7 +18,7 @@
         }
 
         &-info{
-            background-color: $ticket-color;
+            background: $golden-color;
             @include flexCenter;
             flex-direction: column;
             height: 700px;
@@ -33,7 +33,7 @@
             .film-card-hour{
                 @include flexCenter;
                 flex-direction: column;
-                background-color: $ticket-dark-hover-color;
+                background-color: $ticket-dark2-hover-color;
                 position: relative;
                 bottom: 62px;
                 width: 350px;
