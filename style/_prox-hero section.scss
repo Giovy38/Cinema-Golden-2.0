@@ -1,0 +1,141 @@
+@import './utilies';
+@import './color';
+
+#prox-hero-section{
+
+    .prox-hero-section-container{
+        // @include flexCenter;
+        // justify-content: left;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 800px;
+        background-color: $secondary-background;
+
+        @include tablet{
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        &-left{
+
+            @include mobile{
+                height: 500px;
+            }
+            //  Change this if you need to modify the amount of lines displayed
+
+            $total-lines: 6;
+
+            // Leave these unless you want to open a whole can of worms
+            $left-offset: 29px;
+            $clip-height: 50px;
+            $line-height: $clip-height - 5px;
+
+
+            //Apply styles to the parent element
+            .Words {
+
+                position: absolute;
+                bottom: 12px;
+                font-family: 'Source Sans Pro', Helvetica, Arial,   sans-serif;
+                font-size: 45px;
+                font-weight: 900;
+                letter-spacing: -2px;
+                text-transform: uppercase;
+                // Sort out nasty text fuzz
+                transform: translate3d(0, 0, 0);
+                -webkit-font-smoothing: antialiased;
+                -webkit-text-size-adjust: 100%;
+
+                @include tablet{
+                    bottom: 310px;
+                }
+
+                @include mobile{
+                    width: 357px;
+                    overflow: hidden;
+                    font-size: 25px;
+                    height: 500px;
+                    position: absolute;
+                    bottom: -86px;
+                    right: 55px;
+                }
+            }
+
+            // Apply common styles to each line of text
+            .Words-line {       
+                height: $clip-height;
+                overflow: hidden;
+                position: relative;
+            
+                // Change the perspective of each alternating line
+                &:nth-child(odd) {
+                  transform: skew(60deg, -30deg) scaleY(.66667);
+                }
+                &:nth-child(even) {
+                  transform: skew(0deg, -30deg) scaleY(1.33333);
+                }
+            
+                // Loop over the total lines and apply a left offset
+                @for $i from 1 through $total-lines+1 {
+                  &:nth-child(#{$i}) {
+                    left: $left-offset * $i;
+                  }
+                }
+            }
+
+            // Fine-grained text styles
+            p {
+                height: $clip-height;
+                line-height: $line-height;
+                padding: 0 10px;
+                transition: all .4s ease-in-out;
+                transform: translate3d(0, 0, 0);
+                vertical-align: top;
+                white-space: nowrap;
+                color:  $text-light-color;
+
+                @include mobile{
+                    width: 113px;
+                }
+            }
+
+            .cinema-name{
+                background-image: $golden-color;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            #text-to-golden{
+                @include mobile{
+                    visibility: hidden;
+                    position: relative;
+                }
+
+                &:after{
+                    @include mobile{
+                        visibility: visible;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: "golden";
+                        background-image: $golden-color;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
+
+            // The hover interaction
+            .Words:hover {
+                p {
+                    transform: translate3d(0, -($clip-height), 0);
+
+                    @include tablet{
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
+ 

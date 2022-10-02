@@ -12,6 +12,8 @@
     $ticket-color:#f2c78d;
     $ticket-dark-color:#b38f61;
     $ticket-dark-hover-color:#8f7048;
+
+    $golden-color: linear-gradient(to right, $ticket-dark-hover-color,$ticket-color,$ticket-dark-color);
 // BOX SHADOW
     $trasparent-color:rgba(30, 30, 30, 0.658);
 // DECORATION COLOR 
