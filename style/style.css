@@ -417,6 +417,7 @@ section {
   height: 700px;
   width: 350px;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.658);
 }
 @media screen and (max-width: 376px) {
   #film-section .film-section-container-info {
@@ -428,7 +429,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #89612d;
+  background: linear-gradient(#0D0D0D, #262626, #404040, #262626, #0D0D0D);
   position: relative;
   bottom: 62px;
   width: 350px;
@@ -442,9 +443,11 @@ section {
 }
 #film-section .film-section-container-info .film-card-hour h1 {
   text-transform: uppercase;
+  color: #fff;
 }
 #film-section .film-section-container-info .film-card-hour h3 {
   text-align: center;
+  color: #fff;
 }
 #film-section .film-section-container-info .film-section-container-card {
   display: flex;
@@ -530,8 +533,8 @@ section {
 
 #prox-hero-section .prox-hero-section-container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  height: 800px;
+  grid-template-columns: repeat(2, 1fr);
+  height: 1800px;
   background-color: #000;
 }
 @media screen and (max-width: 768px) {
@@ -541,7 +544,7 @@ section {
 }
 @media screen and (max-width: 376px) {
   #prox-hero-section .prox-hero-section-container-left {
-    height: 500px;
+    height: 100px;
   }
 }
 #prox-hero-section .prox-hero-section-container-left .Words {
@@ -558,7 +561,7 @@ section {
 }
 @media screen and (max-width: 768px) {
   #prox-hero-section .prox-hero-section-container-left .Words {
-    bottom: 310px;
+    bottom: 275px;
   }
 }
 @media screen and (max-width: 376px) {
@@ -651,4 +654,48 @@ section {
   #prox-hero-section .prox-hero-section-container-left .Words:hover p {
     transform: none;
   }
+}
+#prox-hero-section .prox-hero-section-container-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  #prox-hero-section .prox-hero-section-container-right {
+    margin-top: 10rem;
+    padding-left: 3.5rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  #prox-hero-section .prox-hero-section-container-right {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1.5rem;
+  }
+}
+#prox-hero-section .prox-hero-section-container-right .prox-film-container-card {
+  width: 300px;
+  height: 500px;
+  background-image: url(/images/prox\ ticket\ to\ paradise.jpg);
+  background-size: 520px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+}
+#prox-hero-section .prox-hero-section-container-right .prox-film-container-card .film-title-gender {
+  background: linear-gradient(to right, #8f7048, #f2c78d, #b38f61);
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#prox-hero-section .prox-hero-section-container-right .prox-film-container-card .film-title-gender .film-title {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

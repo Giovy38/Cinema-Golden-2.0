@@ -7,8 +7,8 @@
         // @include flexCenter;
         // justify-content: left;
         display: grid;
-        grid-template-columns: 50% 50%;
-        height: 800px;
+        grid-template-columns: repeat(2,1fr);
+        height: 1800px;
         background-color: $secondary-background;
 
         @include tablet{
@@ -18,7 +18,7 @@
         &-left{
 
             @include mobile{
-                height: 500px;
+                height: 100px;
             }
             //  Change this if you need to modify the amount of lines displayed
 
@@ -46,7 +46,7 @@
                 -webkit-text-size-adjust: 100%;
 
                 @include tablet{
-                    bottom: 310px;
+                    bottom: 275px;
                 }
 
                 @include mobile{
@@ -135,6 +135,53 @@
                     }
                 }
             }
+        }
+
+        &-right{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            padding-top: 1.5rem;
+
+            @include tablet{
+                margin-top: 10rem;
+                padding-left: 3.5rem;
+            }
+
+            @include mobile{
+                grid-template-columns: repeat(1,1fr);
+                margin-top: 0;
+                padding-top: 0;
+                padding-left: 1.5rem;
+            }
+
+           .prox-film-container-card{
+                width: 300px;
+                height: 500px;
+                background-image: url(/images/prox\ ticket\ to\ paradise.jpg);
+                background-size: 520px;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: flex-end;
+                border-radius: 10px;
+                // @include light-box-shadow;
+
+                .film-title-gender{
+                    background: $golden-color;
+                    position: absolute;
+                    width: 300px;
+                    height: 100px;
+                    border-radius: 0 0 10px 10px;
+                    @include flexCenter;
+                    flex-direction: column;
+
+                    .film-title{
+                        text-transform: uppercase;
+                    }
+                    
+                }
+                
+           }
         }
     }
 }

@@ -24,6 +24,7 @@
             height: 700px;
             width: 350px;
             border-radius: 10px;
+            @include classic-box-shadow;
 
             @include mobile{
                 width: 300px;
@@ -33,7 +34,8 @@
             .film-card-hour{
                 @include flexCenter;
                 flex-direction: column;
-                background-color: $ticket-dark2-hover-color;
+                // background-color: $ticket-dark2-hover-color;
+                background: $black-gradient;
                 position: relative;
                 bottom: 62px;
                 width: 350px;
@@ -46,10 +48,12 @@
 
                 h1{
                     text-transform: uppercase;
+                    color: $text-light-color;
                 }
 
                 h3{
-                    text-align: center
+                    text-align: center;
+                    color: $text-light-color;
                 }
             }
 
