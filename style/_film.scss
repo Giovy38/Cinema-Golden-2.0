@@ -44,6 +44,10 @@
                     width: 300px;
                 }
 
+                h1{
+                    text-transform: uppercase;
+                }
+
                 h3{
                     text-align: center
                 }
@@ -81,6 +85,12 @@
                     background-image: url(/images/watcher.jpg);
                     background-size: cover;
                     background-position: 0 -18px;
+                }
+
+                #film-6-poster{
+                    background-image: url(/images/ticket\ to\ paradise.jpg);
+                    background-size: cover;
+                    background-position: 0 -4px;
                 }
 
                 .film-img{

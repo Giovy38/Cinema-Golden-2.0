@@ -440,6 +440,9 @@ section {
     width: 300px;
   }
 }
+#film-section .film-section-container-info .film-card-hour h1 {
+  text-transform: uppercase;
+}
 #film-section .film-section-container-info .film-card-hour h3 {
   text-align: center;
 }
@@ -473,6 +476,11 @@ section {
   background-image: url(/images/watcher.jpg);
   background-size: cover;
   background-position: 0 -18px;
+}
+#film-section .film-section-container-info .film-section-container-card #film-6-poster {
+  background-image: url(/images/ticket\ to\ paradise.jpg);
+  background-size: cover;
+  background-position: 0 -4px;
 }
 #film-section .film-section-container-info .film-section-container-card .film-img {
   width: 300px;
