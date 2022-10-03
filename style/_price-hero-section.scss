@@ -1,0 +1,89 @@
+@import './color';
+@import './utilies';
+
+#price-section{
+    .price-container{
+        background-image: url(/images/rows-of-red-seats-in-a-theater.jpg);
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+
+        @include mobile{
+            height: 1200px;
+        }
+
+
+        &-card{
+            background: $trasparent-color;
+            width: 700px;
+            height: 370px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 0 1rem 0 1rem;
+            @include light-box-shadow;
+
+            @include mobile{
+                grid-template-columns: repeat(1,1fr);
+                width: 300px;
+                height: 1000px;
+            }
+
+            .price-card{
+                background: $golden-color;
+                border-radius: 10px;
+                height: 300px;
+
+                
+
+                h1{
+                    text-transform: uppercase;
+                    text-align: center;
+                    background: $black-gradient;
+                    height: 35px;
+                    @include flexCenter;
+                    color: $text-light-color;
+                }
+
+                hgroup{
+                    @include flexCenter;
+                    flex-direction: column;
+                    margin-top: 3rem;
+
+                    h4{
+                        font-size: 29px;
+                        text-transform: capitalize;
+                    }
+                }
+
+                .circle{
+                    background: $black-gradient;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    @include flexCenter;
+                    position: relative;
+                    top: 40px;
+                    left: 81px;
+
+                    @include mobile{
+                        left: 100px;
+                    }
+                    
+
+                    i{
+                        color: $ticket-color;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
